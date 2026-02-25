@@ -1,12 +1,217 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Visvatharsan Saravanan - Computer Science Engineering Student Portfolio" />
+  <title>Visvatharsan Saravanan | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="container navbar" aria-label="Main navigation">
+      <a href="#home" class="brand">VS</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-content reveal">
+        <p class="eyebrow">Computer Science Engineering Student</p>
+        <h1>Hi, I'm Visvatharsan</h1>
+        <p class="hero-subheading">CSE Student | Full Stack Developer | Cloud Enthusiast</p>
+        <p class="typing-line">
+          <span class="typing-label">Skills:</span>
+          <span id="typing-text" aria-live="polite"></span>
+          <span class="cursor" aria-hidden="true">|</span>
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-secondary" href="assets/Visvatharsan-Saravanan-CV.pdf" download>Download CV</a>
+          <a class="btn btn-ghost" href="https://github.com/visvatharsan" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>About</h2>
+          <p>I build efficient, production-focused software across full-stack web, Java desktop systems, and cloud infrastructure.</p>
+        </div>
+        <div class="about-grid">
+          <article class="glass-card reveal">
+            <ul class="about-highlights">
+              <li>Built Java Swing + MySQL billing system</li>
+              <li>Developed full-stack Node.js web app</li>
+              <li>Deployed cloud system on GCP</li>
+              <li>CGPA: 8.15</li>
+              <li>Top 7 Hackathon</li>
+              <li>50-Day LeetCode streak</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Skills</h2>
+          <p>Core technologies used for building scalable, modern applications.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="glass-card skill-card reveal">
+            <h3>Languages</h3>
+            <p>C++, C, Java, Python</p>
+          </article>
+          <article class="glass-card skill-card reveal">
+            <h3>Frontend</h3>
+            <p>HTML, CSS, Tailwind, JavaScript</p>
+          </article>
+          <article class="glass-card skill-card reveal">
+            <h3>Backend</h3>
+            <p>Node.js, Express</p>
+          </article>
+          <article class="glass-card skill-card reveal">
+            <h3>Database</h3>
+            <p>MySQL</p>
+          </article>
+          <article class="glass-card skill-card reveal">
+            <h3>Cloud</h3>
+            <p>GCP (Compute Engine, Cloud Storage, Cloud Functions)</p>
+          </article>
+          <article class="glass-card skill-card reveal">
+            <h3>Tools</h3>
+            <p>Git, GitHub</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Projects</h2>
+          <p>Selected projects demonstrating backend logic, performance, and deployment readiness.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="glass-card project-card reveal">
+            <div class="project-head">
+              <h3>Supermarket Billing &amp; Inventory Management System</h3>
+            </div>
+            <ul class="project-points">
+              <li>Java Swing interface with MySQL persistence</li>
+              <li>Secure login and comprehensive logging system</li>
+              <li>Optimized queries for faster billing and inventory operations</li>
+            </ul>
+            <div class="badges" aria-label="Tech stack">
+              <span class="badge">Java Swing</span>
+              <span class="badge">MySQL</span>
+              <span class="badge">SQL Optimization</span>
+            </div>
+            <a class="btn btn-secondary project-btn" href="https://github.com/visvatharsan/supermarket-billing-inventory-management-system" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </article>
+
+          <article class="glass-card project-card reveal">
+            <div class="project-head">
+              <h3>Fundraiser Planner</h3>
+            </div>
+            <ul class="project-points">
+              <li>Built with Node.js + Express architecture</li>
+              <li>Role-based authentication and REST APIs</li>
+              <li>Gemini AI integration with optimized query workflows</li>
+            </ul>
+            <div class="badges" aria-label="Tech stack">
+              <span class="badge">Node.js</span>
+              <span class="badge">Express</span>
+              <span class="badge">REST APIs</span>
+              <span class="badge">Gemini AI</span>
+            </div>
+            <a class="btn btn-secondary project-btn" href="https://github.com/visvatharsan/fundraiser-planner" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Achievements</h2>
+          <p>Consistent execution across competitive coding and hackathon performance.</p>
+        </div>
+        <div class="achievements-grid">
+          <article class="glass-card counter-card reveal">
+            <h3><span class="counter" data-target="7">0</span></h3>
+            <p>Top 7 Hackathon</p>
+            <small>Hackathon Achievement</small>
+          </article>
+          <article class="glass-card counter-card reveal">
+            <h3><span class="counter" data-target="50">0</span>+</h3>
+            <p>50-Day LeetCode Streak</p>
+            <small>Coding Consistency</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Contact</h2>
+          <p>Open to internships, collaborations, and software engineering opportunities.</p>
+        </div>
+
+        <div class="contact-grid">
+          <article class="glass-card contact-info reveal">
+            <ul>
+              <li><strong>Email:</strong> <a href="mailto:visvatharsan.saravanan@gmail.com">visvatharsan.saravanan@gmail.com</a></li>
+              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/visvatharsan-saravanan" target="_blank" rel="noopener noreferrer">linkedin.com/in/visvatharsan-saravanan</a></li>
+              <li><strong>GitHub:</strong> <a href="https://github.com/visvatharsan" target="_blank" rel="noopener noreferrer">github.com/visvatharsan</a></li>
+            </ul>
+          </article>
+
+          <form class="glass-card contact-form reveal" action="#" method="post" onsubmit="return false;" aria-label="Contact form">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="yourmail@example.com" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Visvatharsan Saravanan. Built with HTML, CSS, and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
