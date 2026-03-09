@@ -3,214 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Visvatharsan Saravanan - Computer Science Engineering Student Portfolio" />
+  <meta name="description" content="Visvatharsan Saravanan portfolio featuring full-stack, Java desktop, and cloud-based project implementations." />
   <title>Visvatharsan Saravanan | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div class="background-glow" aria-hidden="true"></div>
+<body data-page="home">
+  <div class="page-bg" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
 
   <header class="site-header">
     <nav class="container navbar" aria-label="Main navigation">
-      <a href="#home" class="brand">VS</a>
+      <a href="index.html" class="brand">Visvatharsan</a>
       <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <ul id="nav-links" class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" data-nav="home">Home</a></li>
+        <li><a href="about.html" data-nav="about">About</a></li>
+        <li><a href="projects.html" data-nav="projects">Projects</a></li>
+        <li><a href="contact.html" data-nav="contact">Contact</a></li>
+        <li><a class="nav-cv-link" href="assets/Visvatharsan-Saravanan-CV.pdf" download>Download CV</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="hero section">
-      <div class="container hero-content reveal">
-        <p class="eyebrow">Computer Science Engineering Student</p>
-        <h1>Hi, I'm Visvatharsan</h1>
-        <p class="hero-subheading">CSE Student | Full Stack Developer | Cloud Enthusiast</p>
-        <p class="typing-line">
-          <span class="typing-label">Skills:</span>
-          <span id="typing-text" aria-live="polite"></span>
-          <span class="cursor" aria-hidden="true">|</span>
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">View Projects</a>
-          <a class="btn btn-secondary" href="assets/Visvatharsan-Saravanan-CV.pdf" download>Download CV</a>
-          <a class="btn btn-ghost" href="https://github.com/visvatharsan" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="kicker">Hello, I am</p>
+          <h1>Visvatharsan <span>Saravanan</span></h1>
+          <p class="hero-role">B.Tech Computer Science Engineering Student | Full-Stack and Cloud-Focused Developer</p>
+          <ul class="hero-facts">
+            <li><strong>Program:</strong> B.Tech in Computer Science Engineering</li>
+            <li><strong>Focus:</strong> Full-Stack Development, Cloud, and AI Workflows</li>
+            <li><strong>Institution:</strong> Available in CV</li>
+          </ul>
+          <div class="typing-line">
+            <span class="typing-label">Working with:</span>
+            <span id="typing-text" aria-live="polite"></span>
+            <span class="cursor" aria-hidden="true">|</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="projects.html">Explore Projects</a>
+            <a class="btn btn-secondary" href="assets/Visvatharsan-Saravanan-CV.pdf" download>Download CV</a>
+            <a class="btn btn-ghost" href="https://github.com/visvatharsan" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <div class="hero-photo reveal" data-tilt-card>
+          <img src="assets/Visva-photo.jpg" alt="Portrait of Visvatharsan Saravanan" />
+          <div class="photo-badge">Open To Internships</div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section">
+    <section class="section">
       <div class="container">
-        <div class="section-heading reveal">
-          <h2>About</h2>
-          <p>I build efficient, production-focused software across full-stack web, Java desktop systems, and cloud infrastructure.</p>
+        <div class="section-head reveal">
+          <p class="kicker">Profile Overview</p>
+          <h2>About Me</h2>
+          <p>I build practical software that combines clean backend architecture, reliable APIs, and cloud deployment readiness. My work spans Java desktop systems, Node.js-based platforms, and retrieval-driven AI flows aimed at solving real user problems.</p>
         </div>
-        <div class="about-grid">
-          <article class="glass-card reveal">
-            <ul class="about-highlights">
-              <li>Built Java Swing + MySQL billing system</li>
-              <li>Developed full-stack Node.js web app</li>
-              <li>Deployed cloud system on GCP</li>
-              <li>CGPA: 8.15</li>
-              <li>Top 7 Hackathon</li>
-              <li>50-Day LeetCode streak</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <h2>Skills</h2>
-          <p>Core technologies used for building scalable, modern applications.</p>
-        </div>
-        <div class="skills-grid">
-          <article class="glass-card skill-card reveal">
-            <h3>Languages</h3>
-            <p>C++, C, Java, Python</p>
-          </article>
-          <article class="glass-card skill-card reveal">
-            <h3>Frontend</h3>
-            <p>HTML, CSS, Tailwind, JavaScript</p>
-          </article>
-          <article class="glass-card skill-card reveal">
-            <h3>Backend</h3>
-            <p>Node.js, Express</p>
-          </article>
-          <article class="glass-card skill-card reveal">
-            <h3>Database</h3>
-            <p>MySQL</p>
-          </article>
-          <article class="glass-card skill-card reveal">
-            <h3>Cloud</h3>
-            <p>GCP (Compute Engine, Cloud Storage, Cloud Functions)</p>
-          </article>
-          <article class="glass-card skill-card reveal">
-            <h3>Tools</h3>
-            <p>Git, GitHub</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <h2>Projects</h2>
-          <p>Selected projects demonstrating backend logic, performance, and deployment readiness.</p>
-        </div>
-        <div class="projects-grid">
-          <article class="glass-card project-card reveal">
-            <div class="project-head">
-              <h3>Supermarket Billing &amp; Inventory Management System</h3>
-            </div>
-            <ul class="project-points">
-              <li>Java Swing interface with MySQL persistence</li>
-              <li>Secure login and comprehensive logging system</li>
-              <li>Optimized queries for faster billing and inventory operations</li>
-            </ul>
-            <div class="badges" aria-label="Tech stack">
-              <span class="badge">Java Swing</span>
-              <span class="badge">MySQL</span>
-              <span class="badge">SQL Optimization</span>
-            </div>
-            <a class="btn btn-secondary project-btn" href="https://github.com/visvatharsan/supermarket-billing-inventory-management-system" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </article>
-
-          <article class="glass-card project-card reveal">
-            <div class="project-head">
-              <h3>Fundraiser Planner</h3>
-            </div>
-            <ul class="project-points">
-              <li>Built with Node.js + Express architecture</li>
-              <li>Role-based authentication and REST APIs</li>
-              <li>Gemini AI integration with optimized query workflows</li>
-            </ul>
-            <div class="badges" aria-label="Tech stack">
-              <span class="badge">Node.js</span>
-              <span class="badge">Express</span>
-              <span class="badge">REST APIs</span>
-              <span class="badge">Gemini AI</span>
-            </div>
-            <a class="btn btn-secondary project-btn" href="https://github.com/visvatharsan/fundraiser-planner" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="achievements" class="section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <h2>Achievements</h2>
-          <p>Consistent execution across competitive coding and hackathon performance.</p>
-        </div>
-        <div class="achievements-grid">
-          <article class="glass-card counter-card reveal">
-            <h3><span class="counter" data-target="7">0</span></h3>
+        <div class="stats-grid">
+          <article class="metric-card reveal" data-tilt-card>
+            <h2><span class="counter" data-target="7">0</span></h2>
             <p>Top 7 Hackathon</p>
-            <small>Hackathon Achievement</small>
           </article>
-          <article class="glass-card counter-card reveal">
-            <h3><span class="counter" data-target="50">0</span>+</h3>
-            <p>50-Day LeetCode Streak</p>
-            <small>Coding Consistency</small>
+          <article class="metric-card reveal" data-tilt-card>
+            <h2><span class="counter" data-target="50">0</span>+</h2>
+            <p>LeetCode Day Streak</p>
+          </article>
+          <article class="metric-card reveal" data-tilt-card>
+            <h2>8.15</h2>
+            <p>Current CGPA</p>
+          </article>
+          <article class="metric-card reveal" data-tilt-card>
+            <h2>3+</h2>
+            <p>Production Projects</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section class="section">
       <div class="container">
-        <div class="section-heading reveal">
-          <h2>Contact</h2>
-          <p>Open to internships, collaborations, and software engineering opportunities.</p>
+        <div class="section-head reveal">
+          <p class="kicker">Highlights</p>
+          <h2>What this portfolio demonstrates</h2>
         </div>
-
-        <div class="contact-grid">
-          <article class="glass-card contact-info reveal">
-            <ul>
-              <li><strong>Email:</strong> <a href="mailto:visvatharsan.saravanan@gmail.com">visvatharsan.saravanan@gmail.com</a></li>
-              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/visvatharsan-saravanan" target="_blank" rel="noopener noreferrer">linkedin.com/in/visvatharsan-saravanan</a></li>
-              <li><strong>GitHub:</strong> <a href="https://github.com/visvatharsan" target="_blank" rel="noopener noreferrer">github.com/visvatharsan</a></li>
-            </ul>
+        <div class="feature-grid">
+          <article class="feature-card reveal" data-tilt-card>
+            <h3>Product Mindset</h3>
+            <p>From problem framing to release, I focus on maintainable architecture and tangible user value.</p>
           </article>
-
-          <form class="glass-card contact-form reveal" action="#" method="post" onsubmit="return false;" aria-label="Contact form">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" required />
-
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="yourmail@example.com" required />
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
-
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
+          <article class="feature-card reveal" data-tilt-card>
+            <h3>Backend First</h3>
+            <p>Well-structured APIs, role-based access, robust logging, and optimized data operations.</p>
+          </article>
+          <article class="feature-card reveal" data-tilt-card>
+            <h3>Cloud Ready</h3>
+            <p>Hands-on deployment mindset with GCP services and scalable, cloud-ready implementation patterns.</p>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Core Toolkit</p>
+          <h2>Technologies I build with</h2>
+        </div>
+        <div class="tech-logo-grid reveal">
+          <div class="tech-logo-item" title="Java"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java logo" /></div>
+          <div class="tech-logo-item" title="Node.js"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js logo" /></div>
+          <div class="tech-logo-item" title="Express"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express logo" /></div>
+          <div class="tech-logo-item" title="MySQL"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL logo" /></div>
+          <div class="tech-logo-item" title="JavaScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo" /></div>
+          <div class="tech-logo-item" title="Python"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo" /></div>
+          <div class="tech-logo-item" title="C++"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++ logo" /></div>
+          <div class="tech-logo-item" title="Git"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git logo" /></div>
+          <div class="tech-logo-item" title="Google Cloud"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud logo" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cta reveal">
+        <div>
+          <p class="kicker">Next Step</p>
+          <h2>Explore implementation, visuals, and engineering choices</h2>
+          <p>Visit the projects page for screenshots, architecture context, and direct GitHub repositories.</p>
+        </div>
+        <a class="btn btn-primary" href="projects.html">View Full Project Gallery</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Visvatharsan Saravanan. Built with HTML, CSS, and JavaScript.</p>
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Visvatharsan Saravanan</p>
+      <div class="footer-links">
+        <a href="https://github.com/visvatharsan" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/visvatharsan-saravanan" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
     </div>
   </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close image preview">Close</button>
+    <img src="" alt="Expanded project shot" id="lightbox-image" />
+  </div>
 
   <script src="script.js"></script>
 </body>

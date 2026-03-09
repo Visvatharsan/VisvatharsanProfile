@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Visvatharsan Saravanan, CSE student focused on backend engineering, cloud deployment, and scalable software systems." />
+  <title>About | Visvatharsan Saravanan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="about">
+  <div class="page-bg" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
+
+  <header class="site-header">
+    <nav class="container navbar" aria-label="Main navigation">
+      <a href="index.html" class="brand">Visvatharsan</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html" data-nav="home">Home</a></li>
+        <li><a href="about.html" data-nav="about">About</a></li>
+        <li><a href="projects.html" data-nav="projects">Projects</a></li>
+        <li><a href="contact.html" data-nav="contact">Contact</a></li>
+        <li><a class="nav-cv-link" href="assets/Visvatharsan-Saravanan-CV.pdf" download>Download CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <div class="container reveal">
+        <p class="kicker">About Me</p>
+        <h1>Engineer focused on practical, measurable outcomes</h1>
+        <p class="lead">My work combines backend logic, structured system design, and deployment-ready execution to solve real-world software problems.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about-layout">
+        <article class="panel reveal" data-tilt-card>
+          <h2>Profile Snapshot</h2>
+          <ul class="check-list">
+            <li>Computer Science Engineering student with CGPA 8.15</li>
+            <li>Built production-oriented projects in Java, Node.js, and MySQL</li>
+            <li>Focused on secure authentication, observability, and maintainable architecture</li>
+            <li>Experienced with GCP services for cloud deployment and scalability</li>
+          </ul>
+        </article>
+
+        <article class="panel reveal" data-tilt-card>
+          <h2>Technical Stack</h2>
+          <div class="tech-logo-grid compact">
+            <div class="tech-logo-item" title="Java"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java logo" /></div>
+            <div class="tech-logo-item" title="Python"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo" /></div>
+            <div class="tech-logo-item" title="C++"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++ logo" /></div>
+            <div class="tech-logo-item" title="JavaScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo" /></div>
+            <div class="tech-logo-item" title="Node.js"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js logo" /></div>
+            <div class="tech-logo-item" title="Express"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express logo" /></div>
+            <div class="tech-logo-item" title="MySQL"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL logo" /></div>
+            <div class="tech-logo-item" title="Google Cloud"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud logo" /></div>
+            <div class="tech-logo-item" title="Git"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git logo" /></div>
+            <div class="tech-logo-item" title="GitHub"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub logo" /></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Journey</p>
+          <h2>Experience Timeline</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <h3>Supermarket Billing & Inventory System</h3>
+            <p>Designed Java Swing workflows with MySQL persistence, secure login, and SQL optimization for faster billing and inventory handling.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <h3>Fundraiser Planner Platform</h3>
+            <p>Built Node.js and Express backend modules with role-based access, clean API structure, and AI-assisted workflow integration.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <h3>RAG Assistant Exploration</h3>
+            <p>Implemented retrieval-augmented patterns and improved answer quality by refining chunk strategy, retrieval flow, and prompt structure.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Visvatharsan Saravanan</p>
+      <div class="footer-links">
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

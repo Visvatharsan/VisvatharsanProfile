@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Visvatharsan Saravanan" />
+  <title>Contact | Visvatharsan Saravanan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="contact">
+  <div class="page-bg" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
+
+  <header class="site-header">
+    <nav class="container navbar" aria-label="Main navigation">
+      <a href="index.html" class="brand">Visvatharsan</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html" data-nav="home">Home</a></li>
+        <li><a href="about.html" data-nav="about">About</a></li>
+        <li><a href="projects.html" data-nav="projects">Projects</a></li>
+        <li><a href="contact.html" data-nav="contact">Contact</a></li>
+        <li><a class="nav-cv-link" href="assets/Visvatharsan-Saravanan-CV.pdf" download>Download CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <div class="container reveal">
+        <p class="kicker">Contact</p>
+        <h1>Let us build something meaningful</h1>
+        <p class="lead">Open to internships, freelance collaborations, and software engineering opportunities.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <article class="panel reveal" data-tilt-card>
+          <h2>Reach Out</h2>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:visvatharsan6@gmail.com">visvatharsan6@gmail.com</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/visvatharsan-saravanan" target="_blank" rel="noopener noreferrer">linkedin.com/in/visvatharsan-saravanan</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/visvatharsan" target="_blank" rel="noopener noreferrer">github.com/visvatharsan</a></li>
+          </ul>
+        </article>
+
+        <form class="panel contact-form reveal" id="contact-form" action="#" method="post">
+          <h2>Send a Message</h2>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="yourmail@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Visvatharsan Saravanan</p>
+      <div class="footer-links">
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

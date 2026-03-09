@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Project gallery of Visvatharsan Saravanan featuring backend systems, AI workflows, and database-driven applications." />
+  <title>Projects | Visvatharsan Saravanan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="projects">
+  <div class="page-bg" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
+
+  <header class="site-header">
+    <nav class="container navbar" aria-label="Main navigation">
+      <a href="index.html" class="brand">Visvatharsan</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html" data-nav="home">Home</a></li>
+        <li><a href="about.html" data-nav="about">About</a></li>
+        <li><a href="projects.html" data-nav="projects">Projects</a></li>
+        <li><a href="contact.html" data-nav="contact">Contact</a></li>
+        <li><a class="nav-cv-link" href="assets/Visvatharsan-Saravanan-CV.pdf" download>Download CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <div class="container reveal">
+        <p class="kicker">Project Showcase</p>
+        <h1>Implementation snapshots from real projects</h1>
+        <p class="lead">Explore backend, AI, and database-focused projects with visual walkthroughs, core stack icons, and repository links.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container reveal">
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter-btn active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="backend">Backend</button>
+          <button class="filter-btn" type="button" data-filter="ai">AI</button>
+          <button class="filter-btn" type="button" data-filter="database">Database</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container projects-list">
+        <article class="project-card reveal" data-tags="backend database" data-tilt-card>
+          <div class="project-top">
+            <h2>Fundraiser Planner</h2>
+            <a class="btn btn-secondary" href="https://github.com/visvatharsan/fundraiser-planner" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+          <p>Role-based planning platform built with modular backend routing, structured APIs, and practical workflow automation.</p>
+          <div class="stack-icons" aria-label="Fundraiser project stack">
+            <img class="stack-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+            <img class="stack-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" />
+            <img class="stack-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+            <img class="stack-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+            <img class="stack-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+          </div>
+          <div class="shot-grid">
+            <img class="shot" src="assets/Fundraiser/1.jpg" alt="Fundraiser screenshot 1" />
+            <img class="shot" src="assets/Fundraiser/2.jpg" alt="Fundraiser screenshot 2" />
+            <img class="shot" src="assets/Fundraiser/3.jpg" alt="Fundraiser screenshot 3" />
+            <img class="shot" src="assets/Fundraiser/4.jpg" alt="Fundraiser screenshot 4" />
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-tags="ai backend" data-tilt-card>
+          <div class="project-top">
+            <h2>RAG Workflow Project</h2>
+            <a class="btn btn-secondary" href="#" aria-disabled="true">In Progress</a>
+          </div>
+          <p>RAG pipeline experimentation with optimized retrieval strategy, better prompt handling, and improved response relevance.</p>
+          <div class="stack-icons" aria-label="RAG project stack">
+            <img class="stack-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+            <img class="stack-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" />
+            <img class="stack-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+            <img class="stack-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+          </div>
+          <div class="shot-grid">
+            <img class="shot" src="assets/RAG/1.jpg" alt="RAG screenshot 1" />
+            <img class="shot" src="assets/RAG/2.jpg" alt="RAG screenshot 2" />
+            <img class="shot" src="assets/RAG/3.jpg" alt="RAG screenshot 3" />
+            <img class="shot" src="assets/RAG/4.jpg" alt="RAG screenshot 4" />
+            <img class="shot" src="assets/RAG/5.jpg" alt="RAG screenshot 5" />
+            <img class="shot" src="assets/RAG/6.jpg" alt="RAG screenshot 6" />
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-tags="database backend" data-tilt-card>
+          <div class="project-top">
+            <h2>Inventory & Billing System</h2>
+            <a class="btn btn-secondary" href="https://github.com/visvatharsan/supermarket-billing-inventory-management-system" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+          <p>Desktop billing and inventory system with authentication, persistent storage, and optimized SQL operations.</p>
+          <div class="stack-icons" aria-label="Inventory project stack">
+            <img class="stack-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+            <img class="stack-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+            <img class="stack-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+            <img class="stack-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+          </div>
+          <div class="shot-grid">
+            <img class="shot" src="assets/dp/1.png" alt="Inventory system screenshot 1" />
+            <img class="shot" src="assets/dp/2.png" alt="Inventory system screenshot 2" />
+            <img class="shot" src="assets/dp/3.png" alt="Inventory system screenshot 3" />
+            <img class="shot" src="assets/dp/4.png" alt="Inventory system screenshot 4" />
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Visvatharsan Saravanan</p>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close image preview">Close</button>
+    <img src="" alt="Expanded project shot" id="lightbox-image" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
