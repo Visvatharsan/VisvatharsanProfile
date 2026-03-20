@@ -1,4 +1,5 @@
 const page = document.body.dataset.page || "";
+const root = document.documentElement;
 
 const typingElement = document.getElementById("typing-text");
 const words = ["Node.js", "Java", "MySQL", "GCP", "REST APIs", "Cloud Functions"];
@@ -63,6 +64,16 @@ const revealObserver = new IntersectionObserver(
   { threshold: 0.18 }
 );
 revealItems.forEach((item) => revealObserver.observe(item));
+
+function updateScrollProgress() {
+  const scrollTop = window.scrollY;
+  const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+  root.style.setProperty("--scroll-progress", `${progress}%`);
+}
+
+updateScrollProgress();
+window.addEventListener("scroll", updateScrollProgress, { passive: true });
 
 const counters = document.querySelectorAll(".counter");
 const animateCounter = (counter) => {
@@ -169,6 +180,20 @@ if (canTilt) {
     });
   });
 }
+
+const spotlightCards = document.querySelectorAll(
+  ".hero-mini-card, .signal-card, .spotlight-card, .build-panel, .value-strip > div, .feature-card, .metric-card, .panel, .project-card, .timeline-item"
+);
+
+spotlightCards.forEach((card) => {
+  card.addEventListener("mousemove", (event) => {
+    const box = card.getBoundingClientRect();
+    const x = ((event.clientX - box.left) / box.width) * 100;
+    const y = ((event.clientY - box.top) / box.height) * 100;
+    card.style.setProperty("--mx", `${x}%`);
+    card.style.setProperty("--my", `${y}%`);
+  });
+});
 
 const orbs = document.querySelectorAll(".orb");
 if (orbs.length > 0 && canTilt) {

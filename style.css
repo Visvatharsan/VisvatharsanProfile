@@ -14,6 +14,7 @@
   --radius: 18px;
   --radius-sm: 12px;
   --shadow: 0 20px 45px rgba(1, 3, 8, 0.55);
+  --shadow-soft: 0 18px 34px rgba(3, 8, 20, 0.35);
   --ease: 260ms ease;
 }
 
@@ -31,6 +32,7 @@ body {
   background:
     radial-gradient(circle at 15% 12%, rgba(40, 215, 255, 0.14), transparent 34%),
     radial-gradient(circle at 88% 4%, rgba(126, 139, 255, 0.2), transparent 36%),
+    radial-gradient(circle at 50% 120%, rgba(255, 167, 94, 0.09), transparent 30%),
     linear-gradient(140deg, #050913 0%, #0a1020 42%, #060b17 100%);
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
   line-height: 1.65;
@@ -59,6 +61,17 @@ a {
   inset: 0;
   z-index: -2;
   overflow: hidden;
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--scroll-progress, 0%);
+  height: 3px;
+  z-index: 120;
+  background: linear-gradient(90deg, #28d7ff 0%, #7e8bff 55%, #ffb36b 100%);
+  box-shadow: 0 0 18px rgba(40, 215, 255, 0.55);
 }
 
 .orb {
@@ -96,6 +109,17 @@ a {
   opacity: 0.34;
 }
 
+.grid-glow {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(131, 156, 214, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(131, 156, 214, 0.06) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.9), transparent 78%);
+  opacity: 0.35;
+}
+
 @keyframes orbFloat {
   0%,
   100% {
@@ -113,6 +137,7 @@ a {
 
 .section {
   padding: 4.8rem 0;
+  position: relative;
 }
 
 .section-tight {
@@ -132,6 +157,7 @@ a {
   backdrop-filter: blur(10px);
   background: rgba(6, 10, 18, 0.72);
   border-bottom: 1px solid rgba(132, 157, 214, 0.18);
+  box-shadow: 0 10px 28px rgba(3, 8, 20, 0.18);
 }
 
 .navbar {
@@ -179,13 +205,34 @@ a {
   color: var(--ink-soft);
   font-weight: 700;
   padding: 0.3rem 0.1rem;
-  transition: color var(--ease);
+  transition: color var(--ease), opacity var(--ease);
+  position: relative;
 }
 
 .nav-links a.active,
 .nav-links a:hover,
 .nav-links a:focus-visible {
   color: var(--primary);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--ease);
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
 }
 
 .nav-links a.nav-cv-link {
@@ -228,6 +275,8 @@ a {
   gap: 2rem;
   align-items: center;
   min-height: 74vh;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-copy,
@@ -249,6 +298,7 @@ h1 {
   margin: 0.5rem 0 1rem;
   font-size: clamp(2rem, 6vw, 4rem);
   line-height: 1.12;
+  text-wrap: balance;
 }
 
 h1 span {
@@ -282,8 +332,9 @@ h1 span {
   color: #f4f8ff;
   font-size: 0.86rem;
   font-weight: 700;
-  background: rgba(12, 21, 38, 0.72);
+  background: linear-gradient(145deg, rgba(12, 21, 38, 0.92), rgba(20, 33, 58, 0.72));
   border: 1px solid rgba(132, 157, 214, 0.22);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .hero-facts {
@@ -344,11 +395,31 @@ h1 span {
   border: 1px solid transparent;
   font-weight: 700;
   transition: transform var(--ease), box-shadow var(--ease), background var(--ease), border-color var(--ease);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
 
 .btn:hover,
 .btn:focus-visible {
   transform: translateY(-3px);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: -120% auto auto -20%;
+  width: 42%;
+  height: 260%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+  transform: rotate(18deg) translateX(-220%);
+  transition: transform 700ms ease;
+  z-index: -1;
+}
+
+.btn:hover::before,
+.btn:focus-visible::before {
+  transform: rotate(18deg) translateX(520%);
 }
 
 .btn-primary {
@@ -379,6 +450,7 @@ h1 span {
   max-width: 360px;
   margin-left: auto;
   transform-style: preserve-3d;
+  overflow: hidden;
 }
 
 .hero-mini-grid {
@@ -398,6 +470,28 @@ h1 span {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   backdrop-filter: blur(6px);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-mini-card::before,
+.signal-card::before,
+.spotlight-card::before,
+.build-panel::before,
+.value-strip > div::before,
+.feature-card::before,
+.metric-card::before,
+.panel::before,
+.project-card::before,
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(40, 215, 255, 0.18), transparent 28%);
+  opacity: 0;
+  transition: opacity var(--ease);
+  pointer-events: none;
 }
 
 .hero-mini-card {
@@ -502,6 +596,19 @@ h1 span {
   box-shadow: 0 0 0 1px rgba(40, 215, 255, 0.2), 0 22px 36px rgba(0, 0, 0, 0.5);
 }
 
+.metric-card:hover::before,
+.feature-card:hover::before,
+.panel:hover::before,
+.project-card:hover::before,
+.timeline-item:hover::before,
+.hero-mini-card:hover::before,
+.signal-card:hover::before,
+.spotlight-card:hover::before,
+.build-panel:hover::before,
+.value-strip > div:hover::before {
+  opacity: 1;
+}
+
 .metric-card,
 .feature-card {
   padding: 1.2rem;
@@ -543,6 +650,8 @@ h1 span {
 .project-top h2,
 .timeline-item h3 {
   margin: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .cta {
@@ -552,6 +661,16 @@ h1 span {
   justify-content: space-between;
   gap: 1.2rem;
   background: linear-gradient(145deg, rgba(15, 23, 41, 0.92), rgba(11, 18, 33, 0.86));
+}
+
+.cta::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -45% auto;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(126, 139, 255, 0.24), transparent 68%);
+  pointer-events: none;
 }
 
 .cta p {
@@ -612,8 +731,8 @@ h1 span {
 .tech-logo-grid {
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(9, minmax(0, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.9rem;
 }
 
 .tech-logo-grid.compact {
@@ -624,6 +743,7 @@ h1 span {
   aspect-ratio: 1 / 1;
   display: grid;
   place-items: center;
+  padding: 0.9rem;
   background: rgba(12, 23, 43, 0.82);
   border: 1px solid rgba(132, 157, 214, 0.2);
   border-radius: 14px;
@@ -638,9 +758,21 @@ h1 span {
 }
 
 .tech-logo-item img {
-  width: 34px;
-  height: 34px;
+  width: 100%;
+  height: 100%;
+  max-width: 72px;
+  max-height: 72px;
   object-fit: contain;
+}
+
+.tech-logo-grid:not(.compact) .tech-logo-item {
+  min-height: 78px;
+  padding: 0.45rem;
+}
+
+.tech-logo-grid:not(.compact) .tech-logo-item img {
+  max-width: none;
+  max-height: none;
 }
 
 .timeline {
@@ -662,6 +794,9 @@ h1 span {
 .spotlight-card {
   padding: 1.3rem;
   transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
+    var(--surface);
 }
 
 .spotlight-card:hover,
@@ -692,11 +827,22 @@ h1 span {
   color: #c8f6ff;
   font-weight: 700;
   text-decoration: none;
+  gap: 0.35rem;
+}
+
+.text-link::after {
+  content: "->";
+  transition: transform var(--ease);
 }
 
 .text-link:hover,
 .text-link:focus-visible {
   color: var(--primary);
+}
+
+.text-link:hover::after,
+.text-link:focus-visible::after {
+  transform: translateX(4px);
 }
 
 .build-grid {
@@ -928,6 +1074,17 @@ h1 span {
   transform: translateY(0);
 }
 
+.hero-noise {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 140px;
+  background:
+    linear-gradient(to top, rgba(5, 9, 19, 0.8), transparent),
+    radial-gradient(circle at 20% 50%, rgba(40, 215, 255, 0.1), transparent 28%),
+    radial-gradient(circle at 80% 30%, rgba(126, 139, 255, 0.12), transparent 34%);
+  pointer-events: none;
+}
+
 .lightbox {
   position: fixed;
   inset: 0;
@@ -994,7 +1151,7 @@ h1 span {
   }
 
   .tech-logo-grid {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .tech-logo-grid.compact {
@@ -1033,6 +1190,10 @@ h1 span {
   .footer-wrap {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .scroll-progress {
+    height: 2px;
   }
 
   .hero-mini-grid {
