@@ -578,6 +578,7 @@ h1 span {
 .feature-card,
 .panel,
 .project-card,
+.certificate-card,
 .cta,
 .timeline-item {
   background: var(--surface);
@@ -591,6 +592,7 @@ h1 span {
 .feature-card:hover,
 .panel:hover,
 .project-card:hover,
+.certificate-card:hover,
 .timeline-item:hover {
   border-color: rgba(40, 215, 255, 0.38);
   box-shadow: 0 0 0 1px rgba(40, 215, 255, 0.2), 0 22px 36px rgba(0, 0, 0, 0.5);
@@ -600,6 +602,7 @@ h1 span {
 .feature-card:hover::before,
 .panel:hover::before,
 .project-card:hover::before,
+.certificate-card:hover::before,
 .timeline-item:hover::before,
 .hero-mini-card:hover::before,
 .signal-card:hover::before,
@@ -926,6 +929,103 @@ h1 span {
   transition: transform var(--ease), opacity var(--ease);
 }
 
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.certificate-card {
+  overflow: hidden;
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent), var(--surface);
+}
+
+.certificate-card:hover,
+.certificate-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(40, 215, 255, 0.38);
+  box-shadow: 0 0 0 1px rgba(40, 215, 255, 0.18), 0 22px 36px rgba(0, 0, 0, 0.45);
+}
+
+.certificate-media {
+  min-height: 190px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, rgba(12, 23, 43, 0.92), rgba(10, 17, 31, 0.82));
+  border-bottom: 1px solid rgba(132, 157, 214, 0.16);
+}
+
+.certificate-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pdf-media {
+  color: #bfefff;
+  font-family: "Sora", "Segoe UI", sans-serif;
+  font-size: 1.45rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.certificate-body {
+  padding: 1.15rem 1.2rem 1.25rem;
+}
+
+.certificate-type {
+  display: inline-flex;
+  margin-bottom: 0.7rem;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(40, 215, 255, 0.1);
+  border: 1px solid rgba(40, 215, 255, 0.24);
+  color: #8befff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.certificate-body h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.certificate-body p {
+  margin: 0.7rem 0 0;
+  color: var(--ink-soft);
+}
+
+.certificate-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.certificate-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #eff8ff;
+  font-weight: 700;
+  border: 1px solid rgba(132, 157, 214, 0.26);
+  background: rgba(12, 21, 38, 0.6);
+  transition: transform var(--ease), border-color var(--ease), background var(--ease);
+}
+
+.certificate-actions a:hover,
+.certificate-actions a:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(40, 215, 255, 0.42);
+  background: rgba(20, 35, 60, 0.82);
+}
+
 .project-card.hidden {
   display: none;
 }
@@ -1137,6 +1237,10 @@ h1 span {
     grid-template-columns: 1fr;
   }
 
+  .certificate-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .stats-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1213,6 +1317,10 @@ h1 span {
   .feature-grid {
     grid-template-columns: 1fr;
   }
+
+  .certificate-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 560px) {
@@ -1224,6 +1332,10 @@ h1 span {
   .stats-grid,
   .shot-grid {
     grid-template-columns: 1fr;
+  }
+
+  .certificate-actions {
+    flex-direction: column;
   }
 
   .tech-logo-grid,

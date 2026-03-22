@@ -182,7 +182,7 @@ if (canTilt) {
 }
 
 const spotlightCards = document.querySelectorAll(
-  ".hero-mini-card, .signal-card, .spotlight-card, .build-panel, .value-strip > div, .feature-card, .metric-card, .panel, .project-card, .timeline-item"
+  ".hero-mini-card, .signal-card, .spotlight-card, .build-panel, .value-strip > div, .feature-card, .metric-card, .panel, .project-card, .certificate-card, .timeline-item"
 );
 
 spotlightCards.forEach((card) => {
