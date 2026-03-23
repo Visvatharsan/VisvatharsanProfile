@@ -768,6 +768,13 @@ h1 span {
   object-fit: contain;
 }
 
+.tech-logo-item img[src*="/express/"],
+.tech-logo-item img[src*="/github/"],
+.stack-icon[src*="/express/"],
+.stack-icon[src*="/github/"] {
+  filter: brightness(0) invert(1);
+}
+
 .tech-logo-grid:not(.compact) .tech-logo-item {
   min-height: 78px;
   padding: 0.45rem;
